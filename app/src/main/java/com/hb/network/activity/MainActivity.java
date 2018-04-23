@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hb.network.BuildConfig;
+import com.hb.base.base.BaseActivity;
+import com.hb.base.utils.PackageUtils;
+import com.hb.base.utils.iconfont.MDFont;
 import com.hb.network.R;
-import com.hb.network.utils.PackageUtils;
-import com.hb.network.utils.iconfont.MDFont;
 
 import butterknife.Bind;
 
@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void initView() {
-        setOnClick(R.id.tv_test);
+        setOnClick(R.id.tv_test, R.id.tv_view_stub);
         initToolBar();
         setIconFontInfo();
     }
@@ -56,8 +56,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void initData() {
         setActionTitle(getString(R.string.main));
-        logoImg.setImageDrawable(getResources().getDrawable(BuildConfig.LOGO));
-        versionTv.setText(BuildConfig.APP_NAME + getString(R.string.version) + " " + PackageUtils.getCurrentVersion());
+        logoImg.setImageDrawable(getResources().getDrawable(R.mipmap.icon));
+        versionTv.setText(getString(R.string.app_name)+ getString(R.string.version) + " " + PackageUtils.getCurrentVersion(this));
     }
 
     @Override
@@ -65,6 +65,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.tv_test:
                 Intent intent = new Intent(this, TestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_view_stub:
+                intent = new Intent(this, ViewStubActivity.class);
                 startActivity(intent);
                 break;
         }

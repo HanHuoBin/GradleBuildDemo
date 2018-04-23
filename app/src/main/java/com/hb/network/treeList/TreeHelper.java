@@ -179,10 +179,10 @@ public class TreeHelper {
     {
         if (node.getChildren().size() > 0 && node.isExpand())
         {
-            node.setIcon(R.mipmap.icon_apple);
+            node.setIcon(R.mipmap.icon);
         } else if (node.getChildren().size() > 0 && !node.isExpand())
         {
-            node.setIcon(R.mipmap.icon_banana);
+            node.setIcon(R.mipmap.icon);
         } else
             node.setIcon(-1);
 

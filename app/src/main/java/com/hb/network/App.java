@@ -1,15 +1,14 @@
 package com.hb.network;
 
 import android.app.Application;
+import android.content.Context;
 
-import com.hb.network.utils.T;
-
-/**
- * Created by hanbin on 2017/9/14.
- */
+import com.hb.base.utils.T;
 
 public class App extends Application {
-    private static App        instance;
+    private static App instance;
+    public static String token = "";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -20,4 +19,10 @@ public class App extends Application {
     public static App getInstance() {
         return instance;
     }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+    }
+
 }

@@ -2,6 +2,7 @@ package com.hb.network.activity;
 
 import android.widget.ListView;
 
+import com.hb.base.base.BaseActivity;
 import com.hb.network.R;
 import com.hb.network.treeList.FileBean;
 import com.hb.network.treeList.SimpleTreeAdapter;
@@ -9,10 +10,6 @@ import com.hb.network.treeList.TreeListViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by hanbin on 2017/11/16.
- */
 
 public class TestActivity extends BaseActivity {
     private List<FileBean> mDatas = new ArrayList<FileBean>();
