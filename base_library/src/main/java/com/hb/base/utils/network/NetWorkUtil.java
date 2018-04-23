@@ -1,4 +1,4 @@
-package com.hb.network.utils.network;
+package com.hb.base.utils.network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

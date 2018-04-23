@@ -1,9 +1,8 @@
-package com.hb.network.utils;
+package com.hb.base.utils;
 
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-
-import com.hb.network.App;
 
 /**
  * Created by hanbin on 2017/10/27.
@@ -15,11 +14,11 @@ public class PackageUtils {
      *
      * @return
      */
-    public static int getCurrentVersionCode() {
+    public static int getCurrentVersionCode(Context context) {
         int curVersionCode = 0;
         try {
-            PackageInfo info = App.getInstance().getPackageManager()
-                    .getPackageInfo(App.getInstance().getPackageName(), 0);
+            PackageInfo info = context.getPackageManager()
+                    .getPackageInfo(context.getPackageName(), 0);
             curVersionCode = info.versionCode;
         } catch (PackageManager.NameNotFoundException e) {
 
@@ -32,11 +31,11 @@ public class PackageUtils {
      *
      * @return
      */
-    public static String getCurrentVersion() {
+    public static String getCurrentVersion(Context context) {
         String curVersion = "";
         try {
-            PackageInfo info = App.getInstance().getPackageManager()
-                    .getPackageInfo(App.getInstance().getPackageName(), 0);
+            PackageInfo info = context.getPackageManager()
+                    .getPackageInfo(context.getPackageName(), 0);
             curVersion = info.versionName;
         } catch (PackageManager.NameNotFoundException e) {
 

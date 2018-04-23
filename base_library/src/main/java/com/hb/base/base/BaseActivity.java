@@ -1,4 +1,4 @@
-package com.hb.network.activity;
+package com.hb.base.base;
 
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -16,12 +16,12 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hb.network.R;
-import com.hb.network.utils.T;
-import com.hb.network.utils.iconfont.MDFontsUtils;
-import com.hb.network.utils.network.NetBroadcastReceiver;
-import com.hb.network.utils.network.NetUtil;
-import com.hb.network.widget.dialog.MyAlertDialog;
+import com.hb.base.R;
+import com.hb.base.utils.T;
+import com.hb.base.utils.iconfont.MDFontsUtils;
+import com.hb.base.utils.network.NetBroadcastReceiver;
+import com.hb.base.utils.network.NetUtil;
+import com.hb.base.widget.dialog.MyAlertDialog;
 
 import java.util.Date;
 
@@ -82,7 +82,7 @@ public abstract class BaseActivity
     }
 
     public void setTooBarBackBtn() {
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        mToolbar.setNavigationOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -275,5 +275,8 @@ public abstract class BaseActivity
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && netBroadcastReceiver != null) {
+//            unregisterReceiver(netBroadcastReceiver);
+//        }
     }
 }

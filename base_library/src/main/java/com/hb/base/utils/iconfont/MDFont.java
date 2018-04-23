@@ -1,4 +1,4 @@
-package com.hb.network.utils.iconfont;
+package com.hb.base.utils.iconfont;
 
 /**
  * Created by hanbin on 17/5/15.

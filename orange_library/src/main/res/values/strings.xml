@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">orange_library</string>
+    <string name="app_name">orange</string>
+    <string name="app_icon_name">orange</string>
 </resources>

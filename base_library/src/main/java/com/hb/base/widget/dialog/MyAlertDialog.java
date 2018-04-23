@@ -1,4 +1,4 @@
-package com.hb.network.widget.dialog;
+package com.hb.base.widget.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.hb.network.R;
+import com.hb.base.R;
 
 
 public class MyAlertDialog {
